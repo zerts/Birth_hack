@@ -24,7 +24,7 @@ function postData(url, data) {
 export const registerTeam = (dispatch, teamJson) => {
 	//alert('submit!');
 	dispatch(registerTeamStatus(C.REGISTER_STATUS.IN_PROCESS));
-	postData('http://192.168.1.49:5000/api/register/', teamJson)
+	postData('http://127.0.0.1:5001/api/register/', teamJson)
 		.then(data => {
 			console.log(data);
 			dispatch(registerTeamStatus(C.REGISTER_STATUS.DONE));
