@@ -34,7 +34,7 @@ def register_command():
         output.write('\n')
         output.write(data['advice'].encode('utf-8'))
     send_email("Регистрация на BirthHack",
-               sender='zertsalov2910@gmail.com',
-               recipients=['zertsalov96@yandex.ru'],
+               sender='birthhack@mipt.ru',
+               recipients=[data['people'][0]['email']],
                text_body=text_body)
     return jsonify({'status': 'success'})
