@@ -37,7 +37,7 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 3em; }
+  margin-top: 2em; }
 
 .man-img {
   height: 4em;
@@ -63,9 +63,9 @@
   align-content: center;
   align-items: center;
   width: 80%;
-  border: 2px solid #ec6700;
-  border-left: 10px solid #ec6700;
-  padding-top: 3em; }
+  background-color: rgba(236, 103, 0, 0.4);
+  border: 2px solid white;
+  padding-top: 1em; }
 
 .register-form-man-extra {
   display: flex;
@@ -83,7 +83,7 @@ input[type=text] {
   background: none;
   border: none;
   border-bottom: 2px solid red;
-  width: 60%;
+  width: 90%;
   font-size: 1em; }
 
 #fill {
@@ -95,7 +95,7 @@ input[type=text] {
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   width: 30%; }
 
 .register-form-field-name {
@@ -113,7 +113,7 @@ input[type=text] {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  margin: 3em 0;
+  margin: 1em 0;
   width: 100%; }
 
 .register-form-team-name {
@@ -122,10 +122,16 @@ input[type=text] {
 
 .register-form-team-extra-skills {
   width: 90%;
-  margin-bottom: 3em; }
+  margin-bottom: 2em; }
 
 .register-skill-checkbox {
   font-size: 1em; }
+
+.validate-registration-text {
+  margin-top: 3em;
+  background-color: rgba(0, 255, 0, 0.3);
+  border: 2px solid white;
+  padding: 1em; }
 
 @media (max-width: 800px) {
   .register-form-team-name {

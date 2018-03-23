@@ -22,9 +22,9 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: url("./media/pattern.png") ;
-	//background-color: #333333;
-	background-size: auto 30%;
+
+	background: #ffffff url("./media/pattern_blank.png");
+	background-size: auto 50%;
 	z-index: -1;
 }
 
@@ -77,14 +77,14 @@
 
 .logo-text {
 	font-family: "Open Sans", sans-serif;
-	color: white;
+	//color: white;
 	font-weight: bold;
 	font-size: 6em;
 }
 
 .logo-info-text {
 	font-family: "Open Sans", sans-serif;
-	color: white;
+	//color: white;
 	font-weight: bold;
 	font-size: 2em;
 }
@@ -92,11 +92,11 @@
 .register-form-button {
 	font-family: "Open Sans", sans-serif;
 	font-weight: bold;
-	color: white;
+	//color: white;
 	font-size: 2em;
 	background: none;
 	border: none;
-	border-bottom: 5px solid white;
+	border-bottom: 5px solid red;
 	transition-duration: 0.4s;
 	margin-top: 2em;
 	border-radius: 5px;
@@ -114,7 +114,8 @@
 
 .main-page-section-title {
 	//color: #ec6700;
-	color: #ff0000;
+	//color: #ff0000;
+	color: white;
 	font-family: "Open Sans", sans-serif;
 	font-weight: bold;
 	font-size: 2.5em;
@@ -187,23 +188,24 @@
 	align-content: center;
 	align-items: center;
 	box-sizing: padding-box;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	background-color: rgba(#ec6700, 0.4);
+	//border: 2px solid #ec6700;
+	//border-left: 10px solid #ec6700;
 	//border-radius: 5px;
 	padding: 1em;
 	transition-duration: 0.4s;
 }
 
 .main-page-track-item:hover {
-	background-color: rgba(#ec6700, 0.3);
+	background-color: rgba(#ec6700, 0.7);
 }
 
 .main-page-track-item-title {
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
-	font-weight: lighter;
+	font-weight: bold;
 	font-size: 2em;
-	color: white;
+	color: black;
 }
 
 .white-text {
@@ -213,9 +215,9 @@
 .main-page-track-item-text {
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
-	font-weight: lighter;
+	font-weight: bold;
 	font-size: 1em;
-	color: white;
+	color: black;
 	margin: 1em 0;
 }
 
@@ -228,9 +230,9 @@
 
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
-	font-weight: lighter;
+	font-weight: bold;
 	font-size: 2em;
-	color: white;
+	color: black;
 	//align-self: stretch;
 }
 
@@ -255,22 +257,21 @@
 		align-content: center;
 		align-items: center;
 		box-sizing: padding-box;
-		border: 2px solid #ec6700;
-		border-left: 10px solid #ec6700;
+		background-color: rgba(#ec6700, 0.4);
 		padding: 1em;
 		transition-duration: 0.4s;
 }
 
 .main-page-point-item:hover {
-	 background-color: rgba(#ec6700, 0.3);
+	 background-color: rgba(#ec6700, 0.7);
  }
 
 .main-page-track-point-title {
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
 	font-weight: lighter;
-	font-size: 1.2em;
-	color: white;
+	font-size: 2em;
+	//color: white;
 }
 
 .main-page-deadlines {
@@ -318,8 +319,10 @@
 	font-weight: lighter;
 	color: white;
 	padding: 1em 0;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	background-color: rgba(#ec6700, 0.1);
+
+	border: 2px solid white;
+	//border-left: 10px solid #ec6700;
 	min-width: 250px;
 	transition-duration: 0.4s;
 }
@@ -331,6 +334,7 @@
 .main-page-deadline-date {
 	font-size: 1.5em;
 	color: #ec6700;
+	font-weight: bold;
 }
 
 .main-page-schedule-item {
@@ -343,8 +347,9 @@
 	font-weight: lighter;
 	color: white;
 	padding: 1em 0;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	background-color: rgba(#ec6700, 0.1);
+	border: 2px solid white;
+	//border-left: 10px solid #ec6700;
 	min-width: 500px;
 	min-height: 400px;
 	transition-duration: 0.4s;
@@ -433,8 +438,8 @@
 	align-content: flex-start;
 	align-items: flex-start;
 	padding: 1em;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	border: 2px solid white;
+	background-color: rgba(#ec6700, 0.4);
 }
 
 .location-img {
@@ -456,8 +461,7 @@
 iframe, object, embed {
 	max-width: 100%;
 	max-height: 50vh;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	border: 2px solid white;
 }
 
 .main-page-footer {
@@ -471,8 +475,8 @@ iframe, object, embed {
 
 .main-page-footer-text {
 	font-family: "Open Sans", sans-serif;
-	font-weight: lighter;
-	color: white;
+	font-weight: bold;
+	//color: white;
 }
 
 .register-form-advice {
@@ -485,8 +489,7 @@ textarea {
 	font-family: "Open Sans", sans-serif;
 	font-weight: lighter;
 	color: white;
-	border: 2px solid #ec6700;
-	border-left: 10px solid #ec6700;
+	border: 2px solid white;
 }
 
 @media(max-width:800px) {

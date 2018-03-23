@@ -24,11 +24,11 @@ function postData(url, data) {
 export const registerTeam = (dispatch, teamJson) => {
 	//alert('submit!');
 	dispatch(registerTeamStatus(C.REGISTER_STATUS.IN_PROCESS));
-	postData('http://127.0.0.1:5001/api/register/', teamJson)
+	postData('http://10.55.229.92/api/register/', teamJson)
 		.then(data => {
 			console.log(data);
 			dispatch(registerTeamStatus(C.REGISTER_STATUS.DONE));
-			alert('Команда зарегистрирована, в ближайшее время на первый указанный email должно прийти письмо с подтверждением')
+			//alert('Команда зарегистрирована, в ближайшее время на первый указанный email должно прийти письмо с подтверждением')
 		})
 		.catch(error => console.error(error))
 };

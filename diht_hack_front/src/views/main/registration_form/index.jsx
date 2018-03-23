@@ -11,6 +11,7 @@ import {
 import './style.css';
 import man from '../media/man.png';
 import Textarea from "react-textarea-autosize";
+import C from '../../../constants';
 
 const RegisterFormInput = ({title, index, value, onChange=f=>f, notRequired, className}) => (
 	<div className={className}>
@@ -48,7 +49,7 @@ const RegisterFormManUI = ({manData, index, notRequired,
 				                   value={manData[index].email}
 				                   onChange={registerChangeEmailForm}
 				                   notRequired={notRequired}
-				                   className="register-form-field"/>
+				                   className="register-form-field email-form"/>
 
 				<RegisterFormInput title="Phone"
 				                   index={index}
@@ -88,12 +89,21 @@ const RegisterFormMan = connect(
 
 const SkillForm = ({skill, onChange=f=>f}) => (
 	<div className="register-skill-checkbox">
-		<input type="checkbox"
-		       name={skill.skill}
-		       value={skill.skill}
-		       defaultChecked={skill.status}
-		       onChange={() => onChange(skill.skill)}/>
-		{skill.skill}
+		<label>
+			<input type="checkbox"
+			       name={skill.skill}
+			       value={skill.skill}
+			       defaultChecked={skill.status}
+			       onChange={() => onChange(skill.skill)}/>
+			{skill.skill}
+		</label>
+	</div>
+);
+
+const Validate = () => (
+	<div className="validate-registration-text">
+		Спасибо за регистрацию! <br/>
+		В ближайшее время на первый указанный email придёт письмо с подтверждением.
 	</div>
 );
 
@@ -152,7 +162,7 @@ class RegistrationFormComponent extends React.Component {
 
 				<div className="register-form-man-full">
 					<div className="register-form-man-img">
-						Отметьте ваши главные компетенции:
+						Ваши компетенции:
 					</div>
 					<div className="register-form-man">
 						<div className="register-form-skills">
@@ -173,7 +183,7 @@ class RegistrationFormComponent extends React.Component {
 				</div>
 				<div className="register-form-man-full">
 					<div className="register-form-man-img">
-						Дополнительные пожелания и предложения:
+						Пожелания и предложения:
 					</div>
 					<div className="register-form-advice">
 						<Textarea
@@ -189,7 +199,9 @@ class RegistrationFormComponent extends React.Component {
 						&& this.props.registerForm.people[0].name
 						&& this.props.registerForm.people[0].phone
 						&& this.props.registerForm.people[0].univercity)
-				} type="submit" value="Submit" />
+				} type="submit" value={this.props.registerStatus === C.REGISTER_STATUS.NOT_YET ? "Зарегистрироваться"
+					: (this.props.registerStatus === C.REGISTER_STATUS.IN_PROCESS ? "В процессе..." : "Зарегестрироваться ещё раз")}/>
+				{this.props.registerStatus === C.REGISTER_STATUS.DONE ? <Validate/> : ""}
 			</form>
 			)
 	}

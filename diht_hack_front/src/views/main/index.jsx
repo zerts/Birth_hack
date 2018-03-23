@@ -31,9 +31,9 @@ import hack_logo from './media/hack_logo2.png';
 const Header = () => (
 	<div className="black-back main-page-header">
 		<img className="sponsor-img" src={oneC} alt="1c"/>
-		<img className="sponsor-img" src={oneC} alt="1c"/>
+		{/*<img className="sponsor-img" src={oneC} alt="1c"/>*/}
 		<img className="sponsor-img" src={lab} alt="vox"/>
-		<img className="sponsor-img" src={diht} alt="diht"/>
+		{/*<img className="sponsor-img" src={diht} alt="diht"/>*/}
 		<img className="sponsor-img" src={diht} alt="diht"/>
 	</div>
 );
@@ -165,7 +165,7 @@ const MainPoints = ({mainPoints}) => (
 
 const Bonus = ({title, image}) => (
 	<div className="main-page-track-item">
-		<div className="main-page-track-item-title">
+		<div className="main-page-track-point-title">
 			{title}
 		</div>
 		<img className="bonus-img" src={image} alt="bonus"/>
@@ -265,7 +265,7 @@ export class MainPageUI extends React.Component {
 			tracks: [
 				{
 					title: 'First track',
-					text: 'Its about machine learning in adult industry',
+					text: 'Coming soon...',
 				},
 				{
 					title: 'Second track',
@@ -277,7 +277,7 @@ export class MainPageUI extends React.Component {
 				},
 				{
 					title: 'Forth track',
-					text: 'Its about being really cool',
+					text: 'Coming soon too...',
 				}
 			],
 			deadlines: [
